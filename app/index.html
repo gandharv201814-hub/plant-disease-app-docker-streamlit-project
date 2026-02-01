@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Disease Classification</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1>🌱 Plant Disease Classification</h1>
+
+    <!-- Image Upload -->
+    <div class="card">
+        <h3>Upload Image</h3>
+        <input type="file" id="imageUpload" accept="image/*">
+        <button onclick="uploadImage()">Predict</button>
+    </div>
+
+    <!-- Camera Section -->
+    <div class="card">
+        <h3>Capture from Camera</h3>
+        <video id="video" autoplay></video>
+        <button onclick="captureImage()">Capture</button>
+        <canvas id="canvas"></canvas>
+        <button onclick="sendCapturedImage()">Predict</button>
+    </div>
+
+    <!-- Result -->
+    <div class="card">
+        <h3>Prediction Result</h3>
+        <p id="result">Waiting for prediction...</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
